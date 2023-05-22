@@ -1,0 +1,12 @@
+C:\Users\artas\Desktop\Bookstore\BookStore.DTO\bin\Debug\net6.0\BookStore.DTO.deps.json
+C:\Users\artas\Desktop\Bookstore\BookStore.DTO\bin\Debug\net6.0\BookStore.DTO.dll
+C:\Users\artas\Desktop\Bookstore\BookStore.DTO\bin\Debug\net6.0\BookStore.DTO.pdb
+C:\Users\artas\Desktop\Bookstore\BookStore.DTO\obj\Debug\net6.0\BookStore.DTO.csproj.AssemblyReference.cache
+C:\Users\artas\Desktop\Bookstore\BookStore.DTO\obj\Debug\net6.0\BookStore.DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\artas\Desktop\Bookstore\BookStore.DTO\obj\Debug\net6.0\BookStore.DTO.AssemblyInfoInputs.cache
+C:\Users\artas\Desktop\Bookstore\BookStore.DTO\obj\Debug\net6.0\BookStore.DTO.AssemblyInfo.cs
+C:\Users\artas\Desktop\Bookstore\BookStore.DTO\obj\Debug\net6.0\BookStore.DTO.csproj.CoreCompileInputs.cache
+C:\Users\artas\Desktop\Bookstore\BookStore.DTO\obj\Debug\net6.0\BookStore.DTO.dll
+C:\Users\artas\Desktop\Bookstore\BookStore.DTO\obj\Debug\net6.0\refint\BookStore.DTO.dll
+C:\Users\artas\Desktop\Bookstore\BookStore.DTO\obj\Debug\net6.0\BookStore.DTO.pdb
+C:\Users\artas\Desktop\Bookstore\BookStore.DTO\obj\Debug\net6.0\ref\BookStore.DTO.dll
