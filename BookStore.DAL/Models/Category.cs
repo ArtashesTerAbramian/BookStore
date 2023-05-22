@@ -1,7 +1,6 @@
 ﻿namespace BookStore.DAL.Models;
 
-public class Author : BaseEntity
+public class Category : BaseEntity
 {
     public string Name { get; set; }
-    public string Surname { get; set; }
 }
