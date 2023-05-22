@@ -12,7 +12,7 @@ public class CategorySeeder
         {
             Id = (int)CategoriesEnum.Adventure,
             CreatedDate = DateTime.Now,
-            ModiftyDate = DateTime.Now,
+            ModifyDate = DateTime.Now,
             IsDeleted = false,
             Name = "Adventure",
         });
@@ -21,7 +21,7 @@ public class CategorySeeder
         {
             Id = (int)CategoriesEnum.Classics,
             CreatedDate = DateTime.Now,
-            ModiftyDate = DateTime.Now,
+            ModifyDate = DateTime.Now,
             IsDeleted = false,
             Name = "Classics",
         });
@@ -30,7 +30,7 @@ public class CategorySeeder
         {
             Id = (int)CategoriesEnum.Fantasy,
             CreatedDate = DateTime.Now,
-            ModiftyDate = DateTime.Now,
+            ModifyDate = DateTime.Now,
             IsDeleted = false,
             Name = "Fantasy",
         });
@@ -39,7 +39,7 @@ public class CategorySeeder
         {
             Id = (int)CategoriesEnum.Historical,
             CreatedDate = DateTime.Now,
-            ModiftyDate = DateTime.Now,
+            ModifyDate = DateTime.Now,
             IsDeleted = false,
             Name = "Historical",
         });
@@ -49,7 +49,7 @@ public class CategorySeeder
         {
             Id = (int)CategoriesEnum.Fairy_Tales,
             CreatedDate = DateTime.Now,
-            ModiftyDate = DateTime.Now,
+            ModifyDate = DateTime.Now,
             IsDeleted = false,
             Name = "Fairy_Tales",
         });
