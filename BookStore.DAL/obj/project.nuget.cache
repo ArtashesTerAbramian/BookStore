@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5ZkmpFkbD1lVKgC920Na4ffi6atDfhxlsptkk0kXP3upgnDCCJiHliww+2fjMz3jfsmUO7XfjQokqstF0flMeQ==",
+  "dgSpecHash": "bRv7pLzzaZd0SXB8J5R5uHmE83upZDmVBrm5bXjdO8QqEYK1yDc1XeKYEffVzl4rU7EXntIfBuRZm8sP19gbHg==",
   "success": true,
   "projectFilePath": "C:\\Users\\artas\\Desktop\\Bookstore\\BookStore.DAL\\BookStore.DAL.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\artas\\.nuget\\packages\\efcore.namingconventions\\7.0.2\\efcore.namingconventions.7.0.2.nupkg.sha512",
     "C:\\Users\\artas\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\artas\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.0-preview.4.23259.3\\microsoft.entityframeworkcore.8.0.0-preview.4.23259.3.nupkg.sha512",
     "C:\\Users\\artas\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.0-preview.4.23259.3\\microsoft.entityframeworkcore.abstractions.8.0.0-preview.4.23259.3.nupkg.sha512",
