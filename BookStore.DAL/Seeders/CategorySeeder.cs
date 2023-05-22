@@ -1,4 +1,5 @@
-﻿using BookStore.DAL.Enums;
+﻿using System;
+using BookStore.DAL.Enums;
 using BookStore.DAL.Models;
 using Microsoft.EntityFrameworkCore;
 

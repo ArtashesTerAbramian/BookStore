@@ -1,4 +1,5 @@
-﻿using BookStore.DAL.Models;
+﻿using System;
+using BookStore.DAL.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookStore.DAL.Seeders;

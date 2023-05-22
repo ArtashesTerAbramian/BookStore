@@ -1,4 +1,7 @@
-﻿namespace BookStore.DTO;
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace BookStore.DTO;
 
 
 public class ResponseDto
