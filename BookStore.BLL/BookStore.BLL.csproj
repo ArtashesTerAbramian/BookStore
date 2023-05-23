@@ -6,4 +6,9 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\BookStore.DAL\BookStore.DAL.csproj" />
+        <PackageReference Include="SixLabors.ImageSharp.Web" Version="2.0.2" />
+    </ItemGroup>
+
 </Project>

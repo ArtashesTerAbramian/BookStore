@@ -1,4 +1,5 @@
-﻿using BookStore.DAL;
+﻿using BookStore.BLL.Helpers;
+using BookStore.DAL;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+await app.DatabaseMigrate();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
