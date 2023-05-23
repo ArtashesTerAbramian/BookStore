@@ -20,5 +20,12 @@ public class BookConfiguration : BaseConfiguration<Book>
 
         builder.Property(x => x.Title)
             .HasMaxLength(256);
+
+        builder.HasIndex(x => new
+        {
+            x.AuthorId,
+            x.CategoryId,
+            x.StoreId
+        });
     }
 }
