@@ -10,10 +10,9 @@ public static class AddDbContextExtenstion
     {
         return services.AddDbContext<AppDbContext>(options =>
                     options.UseNpgsql(configuration.GetConnectionString("BookStore"), x =>
-                    {
-                        x.MigrationsHistoryTable("ef_migration_history");
-
-                    })
+                        {
+                            x.MigrationsHistoryTable("ef_migration_history");
+                        })
                     .UseSnakeCaseNamingConvention());
     }
 }

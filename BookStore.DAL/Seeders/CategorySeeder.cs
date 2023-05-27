@@ -12,8 +12,8 @@ public class CategorySeeder
         modelBuilder.Entity<Category>().HasData(new Category
         {
             Id = (int)CategoriesEnum.Adventure,
-            CreatedDate = DateTime.Now,
-            ModifyDate = DateTime.Now,
+            CreatedDate = new(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc),
+            ModifyDate = new(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc),
             IsDeleted = false,
             Name = "Adventure",
         });
@@ -21,8 +21,8 @@ public class CategorySeeder
         modelBuilder.Entity<Category>().HasData(new Category
         {
             Id = (int)CategoriesEnum.Classics,
-            CreatedDate = DateTime.Now,
-            ModifyDate = DateTime.Now,
+            CreatedDate = new(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc),
+            ModifyDate = new(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc),
             IsDeleted = false,
             Name = "Classics",
         });
@@ -30,8 +30,8 @@ public class CategorySeeder
         modelBuilder.Entity<Category>().HasData(new Category
         {
             Id = (int)CategoriesEnum.Fantasy,
-            CreatedDate = DateTime.Now,
-            ModifyDate = DateTime.Now,
+            CreatedDate = new(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc),
+            ModifyDate = new(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc),
             IsDeleted = false,
             Name = "Fantasy",
         });
@@ -39,8 +39,8 @@ public class CategorySeeder
         modelBuilder.Entity<Category>().HasData(new Category
         {
             Id = (int)CategoriesEnum.Historical,
-            CreatedDate = DateTime.Now,
-            ModifyDate = DateTime.Now,
+            CreatedDate = new(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc),
+            ModifyDate = new(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc),
             IsDeleted = false,
             Name = "Historical",
         });
@@ -49,8 +49,8 @@ public class CategorySeeder
         modelBuilder.Entity<Category>().HasData(new Category
         {
             Id = (int)CategoriesEnum.Fairy_Tales,
-            CreatedDate = DateTime.Now,
-            ModifyDate = DateTime.Now,
+            CreatedDate = new(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc),
+            ModifyDate = new(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc),
             IsDeleted = false,
             Name = "Fairy_Tales",
         });

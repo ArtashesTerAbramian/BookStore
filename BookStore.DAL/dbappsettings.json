@@ -1,0 +1,14 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "BookStore": "Host=localhost;Port=5432;Username=postgres;Password=artash;Database=bookStore;Pooling=true;Maximum Pool Size=1000;Timeout=300;CommandTimeout=300;"
+  }
+}
+

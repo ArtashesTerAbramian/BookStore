@@ -23,11 +23,13 @@ public class AppDbContext : DbContext
 
     public override int SaveChanges()
     {
+        AddModificationDate();
         return base.SaveChanges();
     }
 
     public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
+        AddModificationDate();
         return base.SaveChangesAsync(cancellationToken);
     }
 
@@ -50,5 +52,24 @@ public class AppDbContext : DbContext
         }
 
         modelBuilder.SeedData();
+    }
+    
+    private void AddModificationDate()
+    {
+        var entries = ChangeTracker
+            .Entries()
+            .Where(e => e.Entity is BaseEntity && (
+                e.State == EntityState.Added
+                || e.State == EntityState.Modified));
+
+        foreach (var entityEntry in entries)
+        {
+            ((BaseEntity)entityEntry.Entity).ModifyDate = DateTime.UtcNow;
+
+            if (entityEntry.State == EntityState.Added)
+            {
+                ((BaseEntity)entityEntry.Entity).CreatedDate = DateTime.UtcNow;
+            }
+        }
     }
 }
