@@ -20,5 +20,26 @@ public class AdminSeeder
             Name = "admin",
             PasswordHash = _superAdminPasswordHash
         });
+
+        modelBuilder.Entity<Admin>().HasData(new Admin
+        {
+            Id = 2,
+            CreatedDate = new(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc),
+            ModifyDate = new(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc),
+            IsDeleted = false,
+            UserName = "admin2",
+            Name = "admin2",
+            PasswordHash = _superAdminPasswordHash
+        });
+        modelBuilder.Entity<Admin>().HasData(new Admin
+        {
+            Id = 3,
+            CreatedDate = new(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc),
+            ModifyDate = new(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc),
+            IsDeleted = false,
+            UserName = "admin3",
+            Name = "admin3",
+            PasswordHash = _superAdminPasswordHash
+        });
     }
 }
