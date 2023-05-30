@@ -4,8 +4,8 @@ namespace BookStore.BLL.Filters.AdminFilters;
 
 public class AdminFilter : BaseFilter<Admin>
 {
-    public string Email { get; set; }
-    public string UserName { get; set; }
+    public string? Email { get; set; }
+    public string? UserName { get; set; }
     public override IQueryable<Admin> CreateQuery(IQueryable<Admin> query)
     {
         if (Query != null)

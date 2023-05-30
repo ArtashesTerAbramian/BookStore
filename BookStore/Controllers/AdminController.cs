@@ -1,3 +1,4 @@
+using BookStore.BLL.Filters.AdminFilters;
 using BookStore.BLL.Services.AdminService;
 using BookStore.DTO;
 using BookStore.DTO.AdminDtos;
@@ -22,11 +23,18 @@ namespace BookStore.Controllers
         {
             return await _adminService.GetById(id);
         }
+        
+        [HttpGet("get-all")]
+        public async Task<ResponseDto<PagedModelDto<AdminDto>>> GetAll([FromQuery] AdminFilter filter)
+        {
+            return await _adminService.GetAll(filter);
+        }
 
         // POST: api/Admin
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpPost("add")]
+        public async Task<ResponseDto<AdminDto>> Post(AddAdminDto dto)
         {
+            return await _adminService.Add(dto);
         }
 
         // PUT: api/Admin/5

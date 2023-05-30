@@ -8,5 +8,6 @@ internal static class MainSeeder
     {
         CategorySeeder.SeedData(modelBuilder);
         AdminSeeder.SeedData(modelBuilder);
+        ErrorSeeder.SeedData(modelBuilder);
     }
 }

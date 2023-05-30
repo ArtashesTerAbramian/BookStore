@@ -1,10 +1,13 @@
-﻿using AutoMapper;
+﻿using System.Security.Cryptography;
+using AutoMapper;
 using BookStore.BLL.Constants;
 using BookStore.BLL.Filters.AdminFilters;
 using BookStore.BLL.Helpers;
 using BookStore.DAL;
+using BookStore.DAL.Models;
 using BookStore.DTO;
 using BookStore.DTO.AdminDtos;
+using CryptoHelper;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookStore.BLL.Services.AdminService;
@@ -59,7 +62,32 @@ public class AdminService : IAdminService
 
     public async Task<ResponseDto<AdminDto>> Add(AddAdminDto dto)
     {
-        throw new NotImplementedException();
+        var response = new ResponseDto<AdminDto>();
+
+        if (response.HasError)
+            return response;
+
+        if (await _db.Admins.AnyAsync(x => x.UserName == dto.UserName.ToLower().Replace(" ", "")))
+            return await _errorHelper.SetError(response, ErrorConstants.UserNameAlreadyTaken);
+
+        if (await _db.Admins.AnyAsync(x => x.Email == dto.Email.ToLower().Replace(" ", "")))
+            return await _errorHelper.SetError(response, ErrorConstants.EmailInUse);
+
+        var newAdmin = new Admin()
+        {
+            Name = dto.Name,
+            UserName = dto.UserName,
+            Email = dto.Email,
+            PasswordHash = Crypto.HashPassword(dto.Password)
+        };
+
+        _db.Admins.Add(newAdmin);
+
+        await _db.SaveChangesAsync();
+
+        response.Data = _mapper.Map<AdminDto>(newAdmin);
+
+        return response;
     }
 
     public Task<ResponseDto<AdminDto>> Update(UpdateAdminDto dto)
