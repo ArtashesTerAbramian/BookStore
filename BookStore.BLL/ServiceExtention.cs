@@ -20,7 +20,7 @@ public static class ServiceExtention
         services.AddScoped<IErrorService, ErrorService>();
         services.AddScoped<IAdminService, AdminService>();
         services.AddScoped<IAdminSessionService, AdminSessionService>();
+        
 
-        services.AddScoped<IValidator<AddAdminDto>, AddAdminValidator>();
     }
 }
