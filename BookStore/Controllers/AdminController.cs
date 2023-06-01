@@ -2,12 +2,14 @@ using BookStore.BLL.Filters.AdminFilters;
 using BookStore.BLL.Services.AdminService;
 using BookStore.DTO;
 using BookStore.DTO.AdminDtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookStore.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/admin")]
     [ApiController]
+    [Authorize]
     public class AdminController : ControllerBase
     {
         private readonly IAdminService _adminService;

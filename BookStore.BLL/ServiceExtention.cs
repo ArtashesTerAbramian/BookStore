@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using BookStore.BLL.Helpers;
+using BookStore.BLL.Models;
 using BookStore.BLL.Services.AdminService;
 using BookStore.BLL.Services.ErrorService;
 using BookStore.BLL.Validators.AdminValidators;
@@ -15,6 +16,7 @@ public static class ServiceExtention
     public static void AddServices(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddAutoMapper(typeof(ServiceExtention).Assembly);
+        services.Configure<AuthOptions>(options => configuration.GetSection(nameof(AuthOptions)).Bind(options));
 
         services.AddScoped<ErrorHelper>();
         services.AddScoped<IErrorService, ErrorService>();
