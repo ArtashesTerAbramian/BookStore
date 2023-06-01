@@ -15,12 +15,14 @@ public class AppDbContext : DbContext
         
     }
 
+   
     public DbSet<Author> Authors { get; set; }
     public DbSet<Book> Books { get; set; }
     public DbSet<Store> Stores { get; set; }
     public DbSet<Admin> Admins { get; set; }
     public DbSet<Error> Errors { get; set; }
-
+    
+    public DbSet<AdminSession> AdminSessions { get; set; }
     public override int SaveChanges()
     {
         AddModificationDate();
