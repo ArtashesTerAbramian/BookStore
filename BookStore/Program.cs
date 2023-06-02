@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using BookStore.BLL;
 using BookStore.BLL.Helpers;
+using BookStore.BLL.Validators.AdminValidators;
 using BookStore.DAL;
 using FluentValidation.AspNetCore;
 using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
@@ -21,7 +22,9 @@ try
 
     builder.Services.AddDbContext(builder.Configuration);
     
-    builder.Services.AddControllers().AddFluentValidation();
+    builder.Services.AddControllers()
+        .AddFluentValidation(options => 
+            options.RegisterValidatorsFromAssembly(typeof(AddAdminValidator).Assembly));
 
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddEndpointsApiExplorer();
@@ -74,6 +77,7 @@ try
 
     app.UseHttpsRedirection();
 
+    app.UseAuthentication();
     app.UseAuthorization();
 
     app.MapControllers();
