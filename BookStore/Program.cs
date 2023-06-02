@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using BookStore.BLL;
+﻿using BookStore.BLL;
 using BookStore.BLL.Helpers;
 using BookStore.BLL.Validators.AdminValidators;
 using BookStore.DAL;
@@ -26,6 +25,20 @@ try
         .AddFluentValidation(options => 
             options.RegisterValidatorsFromAssembly(typeof(AddAdminValidator).Assembly));
 
+
+
+    builder.Services.AddCors(options =>
+    {
+        options.AddPolicy("AllowAll", builder =>
+        {
+            builder.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+        });
+    });
+
+
+    
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen(c =>

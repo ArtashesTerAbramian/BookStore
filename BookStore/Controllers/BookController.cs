@@ -2,6 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BookStore.BLL.Filters.BookFilters;
+using BookStore.BLL.Services.BookService;
+using BookStore.DTO;
+using BookStore.DTO.BookDtos;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,26 +14,34 @@ namespace BookStore.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class BookController : ControllerBase
     {
-        // GET: api/Book
-        [HttpGet]
-        public IEnumerable<string> Get()
+        private readonly IBookService _bookService;
+
+        public BookController(IBookService bookService)
         {
-            return new string[] { "value1", "value2" };
+            _bookService = bookService;
+        }
+        // GET: api/Book
+        [HttpGet("get-by-id")]
+        public async Task<ResponseDto<BookDto>> Get(int id)
+        {
+            return await _bookService.GetById(id);
         }
 
         // GET: api/Book/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        [HttpGet("get-all")]
+        public async Task<ResponseDto<PagedModelDto<BookDto>>> GetAll([FromQuery] BookFilter filter)
         {
-            return "value";
+            return await _bookService.GetAll(filter);
         }
 
         // POST: api/Book
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpPost("add")]
+        public async Task<ResponseDto<BookDto>> Post([FromBody] AddBookDto dto)
         {
+            return await _bookService.Add(dto);
         }
 
         // PUT: api/Book/5

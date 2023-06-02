@@ -24,5 +24,8 @@
         public const int ArticleNotBeingEdited = 20;
         public const int InvalidSortOrder = 21;
         public const int DublicateSortOrder = 22;
+        public const int CategoryNotFound = 23;
+        public const int AuthorNotFound = 24;
+        public const int StoreNotFound = 25;
     }
 }

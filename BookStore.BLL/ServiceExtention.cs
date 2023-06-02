@@ -2,6 +2,7 @@
 using BookStore.BLL.Helpers;
 using BookStore.BLL.Models;
 using BookStore.BLL.Services.AdminService;
+using BookStore.BLL.Services.BookService;
 using BookStore.BLL.Services.ErrorService;
 using BookStore.BLL.Validators.AdminValidators;
 using BookStore.DTO.AdminDtos;
@@ -22,7 +23,7 @@ public static class ServiceExtention
         services.AddScoped<IErrorService, ErrorService>();
         services.AddScoped<IAdminService, AdminService>();
         services.AddScoped<IAdminSessionService, AdminSessionService>();
-        
+        services.AddScoped<IBookService, BookService>();
 
     }
 }

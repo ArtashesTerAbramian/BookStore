@@ -5,7 +5,7 @@ using BookStore.BLL.Services.AdminService;
 using BookStore.DTO;
 using BookStore.DTO.AdminDtos;
 
-namespace BookStore.Admin.API.Controllers
+namespace BookStore.Controllers
 {
     [Route("api/admin-session")]
     [ApiController]

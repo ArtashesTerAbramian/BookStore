@@ -203,6 +203,31 @@ namespace BookStore.DAL.Seeders
                 IsDeleted = false,
                 Name = "Ошибка. Данная очередь используется."
             });
+            modelBuilder.Entity<Error>().HasData(new Error
+            {
+                Id = 23,
+                CreatedDate = new(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc),
+                ModifyDate = new(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc),
+                IsDeleted = false,
+                Name = "Ошибка. Категориа не наидена."
+            });
+            
+            modelBuilder.Entity<Error>().HasData(new Error
+            {
+                Id = 24,
+                CreatedDate = new(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc),
+                ModifyDate = new(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc),
+                IsDeleted = false,
+                Name = "Ошибка. автор не наидена."
+            });
+            modelBuilder.Entity<Error>().HasData(new Error
+            {
+                Id = 25,
+                CreatedDate = new(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc),
+                ModifyDate = new(2022, 1, 1, 0, 0, 0, DateTimeKind.Utc),
+                IsDeleted = false,
+                Name = "Ошибка. магазин не наидена."
+            });
         }
     }
 }

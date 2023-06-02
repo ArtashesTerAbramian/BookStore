@@ -23,6 +23,7 @@ public class AppDbContext : DbContext
     public DbSet<Error> Errors { get; set; }
     
     public DbSet<AdminSession> AdminSessions { get; set; }
+    public DbSet<Category> Categories { get; set; }
     public override int SaveChanges()
     {
         AddModificationDate();

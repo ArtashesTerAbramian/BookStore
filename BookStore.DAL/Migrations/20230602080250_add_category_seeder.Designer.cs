@@ -3,6 +3,7 @@ using System;
 using BookStore.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BookStore.DAL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230602080250_add_category_seeder")]
+    partial class add_category_seeder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -573,22 +576,6 @@ namespace BookStore.DAL.Migrations
                             IsDeleted = false,
                             ModifyDate = new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
                             Name = "Ошибка. Категориа не наидена."
-                        },
-                        new
-                        {
-                            Id = 24,
-                            CreatedDate = new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            IsDeleted = false,
-                            ModifyDate = new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Name = "Ошибка. автор не наидена."
-                        },
-                        new
-                        {
-                            Id = 25,
-                            CreatedDate = new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            IsDeleted = false,
-                            ModifyDate = new DateTime(2022, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
-                            Name = "Ошибка. магазин не наидена."
                         });
                 });
 
